@@ -332,12 +332,13 @@ company
 	background-repeat: no-repeat;
   	background-size: cover;
 	background-position: center;
-	height: 1080px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	color: #ffffff;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 .company h1{
 	font-size: 70px;
@@ -354,41 +355,31 @@ company
 /* ----------------------------------------------------------------------------
 dynamic 
 ------------------------------------------------------------------------------*/
-.dynamic {
-	background-color:#ffffff ;
-	height: 1080px;
+
+  .dynamic {
+	background-color: #ffffff;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	color: #ffffff;
-}
-.dynamic h1{
+	padding-top: 5%;
+	padding-bottom: 5%;
+  }
+  
+  .dynamic h1 {
 	font-size: 70px;
-	margin-bottom: 7%; 
 	color: #000000;
-}
-.dynamic {
-	position: relative;
-	height: 512px;
-	text-align: center;
+	margin-bottom: 2%;
   }
   
- .dynamic .container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
-  }
-  
-  .dynamic .container h1 {
-	font-size: 32px;
-	margin-bottom: 10px;
-  }
-  
-  .dynamic .container p {
-	font-size: 16px;
+  .dynamic p {
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3%;
   }
   
   .slider-container {
@@ -398,45 +389,74 @@ dynamic
 	overflow: hidden;
   }
   
-  .slider {
-	position: absolute;
-	top: 0;
-	left: 0;
+  .swiper-container {
 	width: 100%;
 	height: 100%;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+  }
+  
+  .swiper-slide {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-  }
-  
-  .slider li {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 50%;
 	opacity: 0;
-	transition: opacity 0.5s;
+	transition: opacity 1.5s;
   }
   
-  .slider li.active {
+  .swiper-slide-active {
 	opacity: 1;
   }
   
-  .caption {
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	transform: translateX(-50%);
+  .swiper-slide img {
 	width: 100%;
-	text-align: center;
+	height: 100%;
+	object-fit: cover;
   }
   
-  .caption p {
-	font-size: 20px;
+  .slide-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .caption {
+	font-size: 18px;
+	margin-top: 10px;
+	color: #000000;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px;
+	transform: translateY(-50%);
+  }
+  
+  .swiper-button-prev {
+	left: 10px;
+  }
+  
+  .swiper-button-next {
+	right: 10px;
   }
 
 /* ------------------------------------------------------------------------------

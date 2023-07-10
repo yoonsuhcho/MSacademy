@@ -165,19 +165,7 @@ width:65%;
 }
 
 @media (max-width: 767px) {
-	#overview h2
-  {
-    white-space: pre-line;
-    overflow-wrap: break-word;
-    max-width: 11ch;
-  }
 
-  #features h2 {
-	margin-left: calc(100% - 17ch); /* 오른쪽 여백 조정 */
-    max-width: 17ch;
-
-    text-align: right;
-  }
 	h2{
 		font-size: 30px;
 	}
@@ -185,31 +173,8 @@ width:65%;
 		font-size:25px;
 	}
 	
-	/* Overview Section */
-	#overview p {
-	  margin-right: 10px; /* 조금의 간격을 추가 */
-
-	}
-	#overview p, #features p{
-		font-size: 18px;
-	}
-	/* Features Section */
-	.features1 .left,
-	.features1 .middle,
-	.features1 .right {
-	  text-align: center;
-	  padding: 0;
-	}
 	
-	#features img {
-	  margin-right: 0;
-	  max-width: 60%; /* 이미지 크기를 조절 */
-	}
-	
-	/* Header */
-	.header-content {
-	  /* padding: 10px; */
-	}
+		
 	
 	nav ul {
 	  margin: 0;
@@ -266,6 +231,12 @@ width:65%;
 	.footer .footer-share li {
 	  margin: 5px;
 	}
-
-}
-  
+	/* 추가된 스타일 */
+		.circle ul {
+		flex-wrap: wrap;
+		}
+		
+		.circle img {
+		margin-bottom: 5%;
+		}
+		}

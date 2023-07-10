@@ -377,7 +377,7 @@ company
 	text-align: center;
 	margin: 0 auto;
 	margin-left: 5%;
-	
+	overflow: auto;
 	}
 
 .text{
@@ -420,52 +420,6 @@ company
 dynamic 
 ------------------------------------------------------------------------------*/
 
-.dynamic-container{
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-}
-.slider-container{
-	position: absolute;
-	width: 100%;
-}
-.slide{
-	position: absolute;
-	width: 100%;
-	padding: 0 10%;
-	box-sizing: border-box;
-	top: 50%;
-	transform: translateY(-50%);
-	text-align: center;
-	overflow: hidden;
-}
-.slider-container.animated{
-	-webkit-transition: left .3s ease-in;
-	transition: left .3s ease-in;
-}
-.simple-list{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-#prev,
-#next{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateY(-50%);
-	z-index: 999999;
-	display: inline-block;
-	height: 5em;
-	width: 5em;
-	border-radius: 50%;
-	background-position: center center;
-	background-repeat: no-repeat;
-	-webkit-transition: all .3s ease-in;
-	transition: all .3s ease-in;
-}
-#prev.disabled, #next.disabled{display: none;}
-#prev{background-image: url('arrow-left-out.svg');margin-left: -480px;}
   .dynamic {
 	background-color: #ffffff;
 	height: auto;
@@ -492,6 +446,32 @@ dynamic
 	margin-bottom: 6%;
   }
   
+  .slider-container {
+	position: relative;
+	margin-top: 20px;
+	height: 512px;
+	overflow: hidden;
+  }
+  
+  .swiper-container {
+	width: 100%;
+	height: 100%;
+  }
+  
+  .swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 33.33%;
+	opacity: 1;
+	transition: opacity 1.5s;
+  }
+  
+  /* .swiper-slide-active {
+	opacity: 1;
+  } */
+  
+  
   .slide-item {
 	display: flex;
 	flex-direction: column;
@@ -504,6 +484,39 @@ dynamic
 	color: #000000;
   }
   
+  .swiper-button-next,
+  .swiper-button-prev {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px;
+	transform: translateY(-50%);
+  }
+  
+  .swiper-button-prev {
+	left: 10px;
+  }
+  
+  .swiper-button-next {
+	right: 10px;
+  }
 
 /* ------------------------------------------------------------------------------
 	Overview
@@ -648,7 +661,7 @@ dynamic
 .footer p {
 	font-family: "Roboto", sans-serif;
 	letter-spacing:1px;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 18px;
 	color: #ffffff;
 	text-align: left;

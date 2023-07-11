@@ -19,8 +19,10 @@
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/line-icon.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
 </head>
 <body>
@@ -53,7 +55,6 @@
         새로운 미래 EduTech COMPANY</h1>
       </div>
     </div>
- 
 </section>
 
   <!-- company section -->
@@ -66,7 +67,7 @@
           혁신적인 가치를 제공하고 고객의 성공을 위해 전문가 교육과 지식 공유를 추구하며,<br> 
           현대 사회에서 필요한 기술과 지식을 제공합니다. 
           우리는 고객의 가치를 <br>중심으로 최선을 다해 지속적인 성장을 돕는 파트너가 되겠습니다.</h3></div>
-        <div>
+        <div class="">
         <ul id="circle">
           <li><div class="circle"><img src="images/circle1.png" alt=""></div><div class="text" >IT&프로그래밍</div>
           </li>       
@@ -87,101 +88,116 @@
           <h1>IT & 프로그래밍</h1>
           <p>엠에스아카데미는 연구개발을 통해 최신 기술을 활용하여 클라이언트 맞춤형 서비스를 제공합니다.</p>
         </div>
-        <div class="slider-container">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/1.png" alt="ㄴㄴ">
-                  <div class="caption">웹 · 모바일앱 기획</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/2.png" alt="ㅇ">
-                  <div class="caption">홈페이지 랜딩페이지 제작</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/3.png" alt="ㅇ">
-                  <div class="caption">앱 (안드로이드/IOS)</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/4.png" alt="ㅇ">
-                  <div class="caption">메타버스</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/6.png" alt="ㅇ">
-                  <div class="caption">블록체인 NFT</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/7.png" alt="ㅇ">
-                  <div class="caption">봇 챗봇</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
 <!-- dynamic -->
-    <section class="dynamic">
-      <div class="container">
-        <div>
-          <h1>엠에스아카데미 평생교육원</h1>
-          <p>챗ＧＰＴ, ＡＩ글쓰기, 디지털마케팅 및 그 밖의 분야에 대해 배워보세요. </p>
-        </div>
-        <div class="slider-container">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/1.png" alt="ㄴㄴ">
-                  <div class="caption">웹 · 모바일앱 기획</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/2.png" alt="ㅇ">
-                  <div class="caption">홈페이지 랜딩페이지 제작</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/3.png" alt="ㅇ">
-                  <div class="caption">앱 (안드로이드/IOS)</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/4.png" alt="ㅇ">
-                  <div class="caption">메타버스</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/6.png" alt="ㅇ">
-                  <div class="caption">블록체인 NFT</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/7.png" alt="ㅇ">
-                  <div class="caption">봇 챗봇</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- dynamic -->
+<div class="swiper mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3"
+centered-slides="true" space-between="30" grab-cursor="true">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/1.png">
+  <div class="caption">앱(안드로이드/IOS)</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/2.png">
+  <div class="caption">홈페이지 랜딩페이지</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/3.png">
+  <div class="caption">UX/UI 기획 디자인</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/4.png">
+  <div class="caption">메타버스</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/6.png">
+  <div class="caption">블록체인  NFT</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/7.png">
+  <div class="caption">봇  챗봇</div>
+</div></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div></div> </section>
+
+
+
+<section class="dynamic">
+  <div class="container">
+    <div>
+      <h1>엠에스아카데미 평생교육원</h1>
+      <p>챗ＧＰＴ, ＡＩ글쓰기, 디지털마케팅 및 그 밖의 분야에 대해 배워보세요. </p>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/2.png">
+          <div class="caption">메타버스&NFT</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/3.png">
+          <div class="caption">GPT&AI </div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/4.png">
+          <div class="caption">Marketing</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/5.png">
+          <div class="caption">나도 작가다 (1인 1책 만들기)</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/6.png">
+          <div class="caption">스마트스토어</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/7.png">
+          <div class="caption">사주명리 상담사 전문과정</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/8.png">
+          <div class="caption">타로심리 상담사 전문가과정</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/9.png">
+          <div class="caption">성명학 상담사 전문가과정</div>
+        </div></div>
+    
       </div>
-    </section>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div></div> </section>
+    
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
     <section class="dynamic">
       <div class="container">
@@ -190,10 +206,10 @@
           <p>기획 컨셉과 맞춤형 디자인 그리고 마케팅까지 ONE-STOP 출판 서비스를 만나보세요.</p>
         </div>
         <div class="book">
-          <div><img src="images/book1.png" alt=""><div class="text">교보문고 구매하기</div></div>
-          <div><img src="images/book1.png" alt=""><div class="text">교보문고 구매하기</div></div>
-          <div><img src="images/book1.png" alt=""><div class="text">교보문고 구매하기</div></div>
-          <div><img src="images/book1.png" alt=""><div class="text">교보문고 구매하기</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">구매하기</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">구매하기</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">수강 신청하기</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">종이책 전자책 의뢰하기</div></div>
         </div>
      </div>
             
@@ -205,6 +221,11 @@
           <p>비상주 공유오피스 서비스를 이용해보세요</p>
         </div>
         <div class="book">
+          <div><img src="images/book1.png" alt=""><div class="text">Place</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Price</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Services</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Program</div></div>
+
         </div>
      </div>
     </section>
@@ -216,19 +237,48 @@
           <p>세미나, 교육, 행사 등 모임 서비스를 한번에 경험해볼 수 있는 공간을 이용해보세요.</p>
         </div>
         <div class="book">
+          <div><img src="images/book1.png" alt=""><div class="text">Place</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Price</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Services</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Program</div></div>
+
         </div>
      </div>
     </section>
 
     <section class="dynamic">
       <div class="container">
-        <div>
           <h1>Other Services</h1>
-          <p></p>
+        <table>
+            <tr class="tr">
+              <td><div class="service"><img src="images/1.1.png" alt=""></div><div>교육 운영관리</div>
+              </td>
+              <td><div class="service"><img src="images/1.2.png" alt=""></div><div>PPT 교재제작</div></td>
+              <td><div class="service"><img src="images/1.3.png" alt=""></div><div>출판/전자책</div></td>
+              <td><div class="service"><img src="images/1.4.png" alt=""></div><div>VOD</div></td>
+              <td><div class="service"><img src="images/1.5.png" alt=""></div><div>사업계획서</div></td>
+              <td><div class="service"><img src="images/1.6.png" alt=""></div><div>투자제안서</div></td>
+            </tr>
+            <tr class="tr">
+              <td><div class="service"><img src="images/2.1.png" alt=""></div><div>로고 브랜드</div>
+              </td>
+              <td><div class="service"><img src="images/2.2.png" alt=""></div><div>웹모바일 디자인</div></td>
+              <td><div class="service"><img src="images/2.3.png" alt=""></div><div>마케팅 디자인</div></td>
+              <td><div class="service"><img src="images/2.4.png" alt=""></div><div>그래픽 디자인</div></td>
+              <td><div class="service"><img src="images/2.5.png" alt=""></div><div>인쇄홍보물</div></td>
+              <td><div class="service"><img src="images/2.6.png" alt=""></div><div>인쇄홍보물</div></td>
+            </tr>
+            <tr class="tr">
+              <td><div class="service"><img src="images/3.1.png" alt=""></div><div>마케팅</div>
+              </td>
+              <td><div class="service"><img src="images/3.2.png" alt=""></div><div>채널활성화</div></td>
+              <td><div class="service"><img src="images/3.3.png" alt=""></div><div>바이럴 체험단</div></td>
+              <td><div class="service"><img src="images/3.4.png" alt=""></div><div>퍼포먼스 광고</div></td>
+              <td><div class="service"><img src="images/3.5.png" alt=""></div><div>브랜딩</div></td>
+              <td><div class="service"><img src="images/3.6.png" alt=""></div><div>종합광고대행</div></td>
+            </tr>
+          </table>       
         </div>
-        <div class="book">
-        </div>
-     </div>
     </section>
 
 
@@ -266,6 +316,9 @@
 </footer></section>
 <!-- footer section--> 
 <!-- Include JS files --> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script src="js/bootstrap.min.js"></script> 
@@ -276,7 +329,7 @@
 <script src="js/jquery.subscribe.js"></script> 
 <script src="js/jquery.contact.js"></script> 
 <script src="js/main.js"></script>
-<script src="js/slider.js"></script>
+<script src="js/swiper.min.js"></script>
 
 </body>
 </html>

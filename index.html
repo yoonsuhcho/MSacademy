@@ -5,23 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 
 <head>
-  <script>
-    function addWordSpacing() {
-      var paragraph = document.getElementById("myParagraph");
-      var text = paragraph.innerText;
-      var words = text.split(" "); // 공백을 기준으로 단어 분리
-      var result = "";
-      for (var i = 0; i < words.length; i++) {
-        var word = words[i];
-        if (word.endsWith("’")) {
-          result += word + " "; // 단어가 따옴표로 끝나면 공백 추가
-        } else {
-          result += word + "\u00A0"; // 그 외 단어에는 유니코드 공백 문자(&nbsp;) 추가
-        }
-      }
-      paragraph.innerHTML = result;
-    }
-    </script>
+  
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,15 +19,17 @@
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/line-icon.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
 </head>
-<body onload="addWordSpacing">
+<body>
 <!-- header section -->
-<section class="banner" role="banner">
+<section class="banner" role="banner" >
   <header id="header">
-    <div class="header-content"><h1 style="margin-left: 3%;">엠에스아카데미</h1>
+    <div class="header-content"><h1 style="margin-left: 3%;">엠에스아카데미(주)</h1>
       <!-- navigation section  -->
       <div style="padding-top: 10px; margin-right: 3%;">     
         <nav>
@@ -62,25 +48,33 @@
       <div class="banner-text">
         </div>
       </div>
-      <!-- banner text section--> 
     </div>
-  </div>
+    <div class="container" style="margin-top: 80px;">
+      <div class="row">
+      <h1 class="text-center" style="font-size: 70px;">기술과 교육으로 고객을 이롭게 하는 <br>
+        새로운 미래 EduTech COMPANY</h1>
+      </div>
+    </div>
 </section>
 
   <!-- company section -->
   <section class="company">
     <div>
-    <div class="container" >
+    <div class="container">
         <h1 >COMPANY</h1>
         <h3 >
-          엠에스아카데미 주식회사는 IT 개발 및 프로그램 개발, 평생교육원, 강의장 대관사업, 출판사를 운영하는 회사입니다.  저희 회사는 혁신적인 IT 솔루션과 서비스를 제공하여 고객들의 비즈니스 성공을 돕는 것을 목표로 하고 있습니다. 평생교육원을 운영하여 전문가들에게 교육 및 역량 강화 기회를 제공하고, 강의장 대관사업을 통해 다양한 행사와 세미나를 개최할 수 있는 장소를 제공합니다. 또한, 출판사로서 책 출판을 통해 지식의 공유와 교양 향상에 기여하고 있습니다. 저희 회사는 최고의 기술과 전문가들로 구성된 팀으로 고객들의 요구에 신속하고 효과적으로 대응하며, 지속적인 혁신과 발전을 추구합니다.
-        </h3></div>
-        <div>
-        <ul class="circle">
-          <img src="images/circle.png" alt="">
-          <img src="images/circle.png" alt="" >
-          <img src="images/circle.png" alt="" >
-          <img src="images/circle.png" alt="" >
+          엠에스아카데미(주)는 IT와 프로그램 개발, 평생교육, 출판사를 통해 <br>
+          혁신적인 가치를 제공하고 고객의 성공을 위해 전문가 교육과 지식 공유를 추구하며,<br> 
+          현대 사회에서 필요한 기술과 지식을 제공합니다. 
+          우리는 고객의 가치를 <br>중심으로 최선을 다해 지속적인 성장을 돕는 파트너가 되겠습니다.</h3></div>
+        <div class="">
+        <ul id="circle">
+          <li><div class="circle"><img src="images/circle1.png" alt=""></div><div class="text" >IT&프로그래밍</div>
+          </li>       
+          <li><div class="circle">><img src="images/circle2.png" alt=""></div><div class="text" >평생교육원</div></li>        
+          <li><div class="circle"><img src="images/circle3.png" alt=""></div><div class="text" >메타북스 출판사</div></li>        
+          <li><div class="circle"><img src="images/circle4.png" alt=""></div><div class="text" >비상주 공유오피스</div></li>        
+          <li><div class="circle"><img src="images/circle4.png" alt=""></div><div class="text" >강의장 대관</div></li>        
         </ul>
       </div>
     </div>
@@ -92,236 +86,225 @@
       <div class="container">
         <div>
           <h1>IT & 프로그래밍</h1>
-          <p>메타북스 출판사를 통해 강의를 진행하는 전문 강사들의 저술 활둉을 함께 지원하고 있습니다.</p>
+          <p>엠에스아카데미는 연구개발을 통해 최신 기술을 활용하여 클라이언트 맞춤형 서비스를 제공합니다.</p>
         </div>
-        <div class="slider-container">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/1.png" alt="ㄴㄴ">
-                  <div class="caption">웹 · 모바일앱 기획</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/2.png" alt="ㅇ">
-                  <div class="caption">홈페이지 랜딩페이지 제작</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/3.png" alt="ㅇ">
-                  <div class="caption">앱 (안드로이드/IOS)</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/4.png" alt="ㅇ">
-                  <div class="caption">메타버스</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/6.png" alt="ㅇ">
-                  <div class="caption">블록체인 NFT</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/7.png" alt="ㅇ">
-                  <div class="caption">봇 챗봇</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
 <!-- dynamic -->
+<!-- dynamic -->
+<div class="swiper mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3"
+centered-slides="true" space-between="30" grab-cursor="true">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/1.png">
+  <div class="caption">앱(안드로이드/IOS)</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/2.png">
+  <div class="caption">홈페이지 랜딩페이지</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/3.png">
+  <div class="caption">UX/UI 기획 디자인</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/4.png">
+  <div class="caption">메타버스</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/6.png">
+  <div class="caption">블록체인  NFT</div>
+</div></div>
+<div class="swiper-slide"><div class="slide-item">
+  <img src="images/IT/7.png">
+  <div class="caption">봇  챗봇</div>
+</div></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div></div> </section>
+
+
+
+<section class="dynamic">
+  <div class="container">
+    <div>
+      <h1>엠에스아카데미 평생교육원</h1>
+      <p>챗ＧＰＴ, ＡＩ글쓰기, 디지털마케팅 및 그 밖의 분야에 대해 배워보세요. </p>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/2.png">
+          <div class="caption">메타버스&NFT</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/3.png">
+          <div class="caption">GPT&AI </div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/4.png">
+          <div class="caption">Marketing</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/5.png">
+          <div class="caption">나도 작가다 (1인 1책 만들기)</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/6.png">
+          <div class="caption">스마트스토어</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/7.png">
+          <div class="caption">사주명리 상담사 전문과정</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/8.png">
+          <div class="caption">타로심리 상담사 전문가과정</div>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-item">
+          <img src="images/9.png">
+          <div class="caption">성명학 상담사 전문가과정</div>
+        </div></div>
+    
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div></div> </section>
+    
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
     <section class="dynamic">
       <div class="container">
         <div>
           <h1>메타북스 출판사</h1>
-          <p>맞춤형 기획과 디자인 그리고 마케팅까지 ONE-STOP 출판 서비스를 만나보세요.</p>
+          <p>기획 컨셉과 맞춤형 디자인 그리고 마케팅까지 ONE-STOP 출판 서비스를 만나보세요.</p>
         </div>
-        <div class="slider-container">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/1.png" alt="ㄴㄴ">
-                  <div class="caption">웹 · 모바일앱 기획</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/2.png" alt="ㅇ">
-                  <div class="caption">홈페이지 랜딩페이지 제작</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/3.png" alt="ㅇ">
-                  <div class="caption">앱 (안드로이드/IOS)</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/4.png" alt="ㅇ">
-                  <div class="caption">메타버스</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/6.png" alt="ㅇ">
-                  <div class="caption">블록체인 NFT</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slide-item">
-                  <img src="images/IT/7.png" alt="ㅇ">
-                  <div class="caption">봇 챗봇</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="book">
+          <div><img src="images/book1.png" alt=""><div class="text">구매하기</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">구매하기</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">수강 신청하기</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">종이책 전자책 의뢰하기</div></div>
         </div>
-      </div>
+     </div>
+            
     </section>
-
-<!-- feature section 2 -->
-<section id="overview" class="section overview">
-  <div class="container">
-    <div class="row">
-      <div class="text-left">
-        <h3 style="color: #4285F4;">교육</h3>
-        <h2 class="section-title"><span>클래스 101</span></h2>
-        <br>
-        <p>모두맘은 온/오프라인에서 산모님들을 위한 교육을 통해 지식을 공유하고, 친목과 다양한 선물을 받을 수 있는 특별한 경험을 제공합니다.</p>
-    </div><img src="images/feature-mobile.png"></div></div>
-</section>
-
-<!-- feature section 2 --> 
-
-
-<section id="features" class="section features2">
-  <div class="container">
-    <div class="row">
-      <img src="images/feature-mobile.png"> <div class="text-right">
-    <!-- class="img-responsive"  -->
-    <h3 style="color: #4285F4;">알면 좋은</h3>
-
-        <h2 class="section-title"><span>유용한 정부 정책과 <br> 꿀잼 육아스토리</span></h2><br>
-        <p>유용한 정보정책을 한곳에 모아모아 재밌는 육아스토리를 카드 뉴스로 보실 수 있습니다.</p>
-        </div>
-      </div>
-    </div>
-      </section>
-  
-
-    <section id="overview" class="section overview">
+    <section class="dynamic">
       <div class="container">
-        <div class="row">
-          <div class ="text-left">
-            <h2 class="section-title"><span>체험단</span></h2>
-            <br>
-            <p>모두맘 체험단은 브랜드의 제품을 체험하거나, 
-              방문하여 서비스를 체험하는 모습을 촬영하여 
-              자신의 SNS에 포스팅하는 캠페인 입니다.</p>
-          </div>
-          <img src="images/feature-mobile.png"> 
-          </div>
+        <div>
+          <h1>비상주 공유오피스</h1>
+          <p>비상주 공유오피스 서비스를 이용해보세요</p>
+        </div>
+        <div class="book">
+          <div><img src="images/book1.png" alt=""><div class="text">Place</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Price</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Services</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Program</div></div>
+
+        </div>
+     </div>
+    </section>
+
+    <section class="dynamic">
+      <div class="container">
+        <div>
+          <h1>강의장 대관</h1>
+          <p>세미나, 교육, 행사 등 모임 서비스를 한번에 경험해볼 수 있는 공간을 이용해보세요.</p>
+        </div>
+        <div class="book">
+          <div><img src="images/book1.png" alt=""><div class="text">Place</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Price</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Services</div></div>
+          <div><img src="images/book1.png" alt=""><div class="text">Program</div></div>
+
+        </div>
+     </div>
+    </section>
+
+    <section class="dynamic">
+      <div class="container">
+          <h1>Other Services</h1>
+        <table>
+            <tr class="tr">
+              <td><div class="service"><img src="images/1.1.png" alt=""></div><div>교육 운영관리</div>
+              </td>
+              <td><div class="service"><img src="images/1.2.png" alt=""></div><div>PPT 교재제작</div></td>
+              <td><div class="service"><img src="images/1.3.png" alt=""></div><div>출판/전자책</div></td>
+              <td><div class="service"><img src="images/1.4.png" alt=""></div><div>VOD</div></td>
+              <td><div class="service"><img src="images/1.5.png" alt=""></div><div>사업계획서</div></td>
+              <td><div class="service"><img src="images/1.6.png" alt=""></div><div>투자제안서</div></td>
+            </tr>
+            <tr class="tr">
+              <td><div class="service"><img src="images/2.1.png" alt=""></div><div>로고 브랜드</div>
+              </td>
+              <td><div class="service"><img src="images/2.2.png" alt=""></div><div>웹모바일 디자인</div></td>
+              <td><div class="service"><img src="images/2.3.png" alt=""></div><div>마케팅 디자인</div></td>
+              <td><div class="service"><img src="images/2.4.png" alt=""></div><div>그래픽 디자인</div></td>
+              <td><div class="service"><img src="images/2.5.png" alt=""></div><div>인쇄홍보물</div></td>
+              <td><div class="service"><img src="images/2.6.png" alt=""></div><div>인쇄홍보물</div></td>
+            </tr>
+            <tr class="tr">
+              <td><div class="service"><img src="images/3.1.png" alt=""></div><div>마케팅</div>
+              </td>
+              <td><div class="service"><img src="images/3.2.png" alt=""></div><div>채널활성화</div></td>
+              <td><div class="service"><img src="images/3.3.png" alt=""></div><div>바이럴 체험단</div></td>
+              <td><div class="service"><img src="images/3.4.png" alt=""></div><div>퍼포먼스 광고</div></td>
+              <td><div class="service"><img src="images/3.5.png" alt=""></div><div>브랜딩</div></td>
+              <td><div class="service"><img src="images/3.6.png" alt=""></div><div>종합광고대행</div></td>
+            </tr>
+          </table>       
         </div>
     </section>
 
-<!-- screen shots slider section-->
-<section id="screens" class="section screens">
-  <div class="container" id="review">
-    <div class="row">
-      <div class="text-center">
-        <h2 class="section-title"><span>같은 고민을 하는 우리들의 <br>진짜 후기를 만나보세요</span></h2>
-        <span>*모두맘네이밍에서 사용한 산모님들의 소중하고 감사한 실제 후기입니다.</span><br><br><h1>  </h1>
-      </div>
-    </div>
-  </div>
-<!-- feature section 2 --> 
-  <!-- owl-carousel starts -->
-  <div id="owl-demo"  class="container">
-    <!-- class="owl-carousel" -->
-    
-    <div class="item">
-      <div class="star">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-      </div>
-애기가 태어나고 이름을 어떻게 지을가 무지 고민을 했는데, 어플을 통해서 사주에 맞는 한자이름과 발음오행 및 풀이가 제공되는 모두맘 네이밍으로 이름을 정했습니다. 
-      사주에 맞는 좋은 이름으로 건강하고 착한아이로 자라는데 조금이나마 애기에게 도움이 된다면 좋을거 같네요. 
-      수고하세요</div>
- 
-    <div class="item">
-      <div class="star">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-      </div>
-쌍둥이라 아가들 태명부터 짓는게 어려웠는데 덕분에 쉽게 고민 해결 되었네요.
-      아빠 엄마 이름과 아기 정보를 넣으니 넘나 맘에 드는 태명이 나오네요.
-      작명소에 갈 필요 없이 전문가가 추천해주고 한자이름 좋은 뜻도 추천해주니 아주 좋습니다.
-      </div>
-    <div class="item">
-            <div class="star">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-        <img src="images/Star.png" alt="">
-      </div>
-어머머 이런 어플도 있다니! 아직 태명조차 정하지 못하고 있었는데 모두맘 네이밍에서 태명정했어요~^^ 아빠, 엄마의 출생년도와 출생시간까지 적어서 넣으니 더 믿음직스럽고 우리 아가 태어나도 태명이 이랬었다고 말해주기 좋을 것 같아요~^^ 아기 태어나면 멀고 비싼 작명소 갈 필요없이 꼭 모두맘 네이밍에서 지을꺼에요!!
-      광주 김민영</div>
-  </div>
-  <!-- owl-carousel starts --> 
-</section>
+
+
 
 <!--subscribe section -->
 <section>
   <div class="last">
-    <!-- 앱다운1 -->
-    <div class="promotion" id="promotion1" style="background-color: #f4f4f4;">
-      <div class ="container" >
-        <h3 style="font-weight: 400;">지금 모두맘과 함께하고<br>다양한 이벤트에 참여하세요!</h3>
-      
-      <div> <a href="https://play.google.com/store/apps/details?id=com.modumom.mobileapp.selfnamebase&hl=ko&gl=US&pli=1">
-      <img src="images/google.png" style="width: 242px;"></a> 
-      <a href="https://apps.apple.com/kr/app/%EB%AA%A8%EB%91%90%EB%A7%98-%EB%84%A4%EC%9D%B4%EB%B0%8D/id1227564158" ><img src="images/apps.png" style="width: 240px;"></a></div>
-      </div></div>
-      
       <!-- 카톡상담2 -->
   <div class="promotion" id="promotion2">
     <div class ="container">
-      <h3 style="font-weight: 400;">더 궁금하신 사항이 있다면,<br>언제든지 모두맘 고객센터로 연락주세요!</h3>
+      <h3 style="font-weight: 400;">더 궁금하신 사항이 있다면,<br>언제든지 엠에스아카데미 고객센터로 연락주세요!</h3>
     
-    <div> <a href="https://pf.kakao.com/_Tfxkjd"><img src="images/kakaochannel.png" style="width: 242px;"></a><img src="images/null.png" style="width: 240px;"></div>
+    <div> <a href="https://pf.kakao.com/_Tfxkjd"><img src="images/kakaochannel.png" style="width: 242px;"></a></div>
     </div></div>
       
-
-<!--subscribe section --> 
-
 <!-- footer section-->
 <footer class="section footer">
       <div class="container">
         <p>
-        에프티앤씨(주) 대표이사 : 황영오 <br>
-        사업자등록번호 : 215-86-93288 | 통신판매업신고 : 2015-경기성남-1486 <br>
-        경기도 성남시 분당구 황새울로 200번길 36 (수내동, 분당동부루트빌딩), 1014 ~ 1015호 <br>
-        고객만족센터 : 1661- 7130 <br>
-        COPYRIGHT © 에프티앤씨(주) ALL RIGHTS RESERVED.
-        <ul class="footer-share">
+          엠에스아카데미(주)  |  대표이사: 황영오 <br>
+          본사: 경기도 성남시 분당구 황새울로 200번길 36, 분당동부루트빌딩 1014호, 1015호<br>
+          강남지점: 서울시 서초구 강남대로 375, 서초현대타워 509호, 510호<br>
+          고객센터  1661-2749 <br>
+          COPYRIGHT © 엠에스아카데미(주) ALL RIGHTS RESERVED.   <br>    
+          <ul class="footer-share">
           <a href="#"><img src="images/facebook.png" alt="" width="50px" style="margin-right: 10px;"> </a>
           <a href="#"><img src="images/blog.png" alt="" width="50px" style="margin-right: 10px;"></a>
           <a href="#"><img src="images/insta.png" alt="" width="50px" style="margin-right: 10px;"></a>
@@ -333,7 +316,11 @@
 </footer></section>
 <!-- footer section--> 
 <!-- Include JS files --> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.fancybox.pack.js"></script> 
 <script src="js/retina.min.js"></script> 
@@ -342,6 +329,7 @@
 <script src="js/jquery.subscribe.js"></script> 
 <script src="js/jquery.contact.js"></script> 
 <script src="js/main.js"></script>
-<script src="js/slider.js"></script>
+<script src="js/swiper.min.js"></script>
+
 </body>
 </html>

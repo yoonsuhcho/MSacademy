@@ -9,9 +9,12 @@
 /* ------------------------------------------------------------------------------
 	Typography
 -------------------------------------------------------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap');
+
 
 p {
+	font-family: "Noto Sans KR";
+	font-weight: 100;
 	font-size: 20px;
 	line-height: 25px;
 	color: #000000;
@@ -45,18 +48,22 @@ p {
 
   }
 h1 {
+	font-family: "Noto Sans KR";
+
 	font-size: 43px;
 	font-weight: bold;
 }
 h2 {
+	font-family: "Noto Sans KR";
+
 	font-size: 50px;
 	font-weight:100;
 }
 h3 {
+	font-family: "Noto Sans KR";
 	font-size: 30px;
-	font-weight: bold;
+	font-weight: 500;
 	letter-spacing:1px;
-	font-weight: bold;
 }
 
 .btn {
@@ -89,12 +96,10 @@ a:hover, a:focus {
 	-webkit-transition: background-color, color, 0.3s;
 	transition: background-color, color, 0.3s;
 }
-body {
-	font-family: "Roboto", sans-serif;
-	font-weight: 400;
-	
-}
-ul, ol {
+body{
+	font-family: "Noto Sans KR";
+
+}ul, ol {
 	margin: 0;
 	padding: 0;
 }
@@ -195,6 +200,8 @@ ul li {
 	float: left;
 }
 #header.fixed {
+	color: #000;
+	background-color: #ffffff;
 	padding-left: 5%;
 	padding-right: 5%;
 	-moz-transition: padding 0.3s;
@@ -203,13 +210,14 @@ ul li {
 	transition: padding 0.3s;
 	/* box-shadow: 0px 1px 10px 3px #c4c4c4; */
 }
+#header.fixed nav ul li a{
+	color: #000;
+}
 
 nav {
     margin-right: 51px;
 	align-items: center;
     justify-content: center;
-	
-	
 }
 
 nav ul {
@@ -236,18 +244,12 @@ nav ul li a {
 	text-align: left;
 	display: inline-block;
 }
-/* .promotion {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	padding: 2%;
-	
-  } */
   .promotion {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 2%;
+	background-color: #f4f4f4;
   }
   
   .promotion h3 {
@@ -266,20 +268,22 @@ nav ul li a {
 	margin-left: 10px;
 	width: 225px;
   }
-
-
 .row{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	flex-direction: column;
+}
+.row p{
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
 }
 .last .row{
-		
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-	
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
 }
+
 /* ------------------------------------------------------------------------------
 	Banner
 -------------------------------------------------------------------------------*/
@@ -346,7 +350,7 @@ company
 	margin-bottom: 7%; 
 }
 .company h3{
-
+	font-weight: 400;
 	font-size: 35px;
 	margin-bottom: 5%; 
 	line-height: 1.3;
@@ -374,13 +378,12 @@ company
 	list-style: none;
 	text-align: center;
 	margin: 0 auto;
-	margin-left: 5%;
+	width: 100%;
 	}
 
 .text{
 	font-size: 30px;
 	width: 250px;
-	font-weight: bold;
 	margin-right: 80px;
 	display: flex;
 	justify-content: center;
@@ -390,19 +393,26 @@ company
 }
 
 .book{
+	max-width: 100%;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	padding: 5%;
 
 }
 .book div{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	max-width: 100%;
+	height: auto;
+
 
 }
 .book .text{
+	font-size: 25px;
 	color: #000;
 	text-align: center;
 	justify-content: center;
@@ -410,17 +420,18 @@ company
 
 }
 .book img{
-	margin-left: 20px;
+	width: 80%;
 	margin-bottom: 10px;
+	max-width: 100%;
 }
 /* ----------------------------------------------------------------------------
 dynamic 
 ------------------------------------------------------------------------------*/
 
   .dynamic {
-	background-color: #ffffff;
 	height: auto;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -442,6 +453,9 @@ dynamic
 	align-items: center;
 	margin-bottom: 6%;
   }
+  .content {
+	text-align: center;
+  }
   
   .swiper {
 	position: relative;
@@ -449,29 +463,41 @@ dynamic
 	height: 512px;
 	overflow: hidden;
   }
-
+  .swiper-wrapper {
+	display: flex;
+	align-items: center;
+  }
   .swiper-slide {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	opacity: 1;
 	transition: opacity 1.5s;
-	position: relative;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-	width: calc(100% / 3);
+	width: calc(100%/3);
+	width: 100%;  }
+  .slide-item img {
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
   }
-  .swiper-slide:nth-child(2) {
-	clip-path: none;
-  }
-  .swiper-slide img{
-	width: 150%;
-  }
-
-  
   .slide-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	height: 100%;
+  }
+  .swiper-slide:not(.swiper-slide-active) img {
+	transform: scale(0.7); /* 비활성화된 슬라이드 이미지 크기 축소 */
+	opacity: 0.7; /* 비활성화된 슬라이드 이미지 투명도 조정 */
+	transition: transform 0.3s, opacity 0.3s; /* 트랜지션 효과 추가 */
+  }
+  
+  .swiper-slide.swiper-slide-active img {
+	transform: scale(1); /* 활성화된 슬라이드 이미지 원래 크기로 복원 */
+	opacity: 1; /* 활성화된 슬라이드 이미지 투명도 복원 */
+	transition: transform 0.3s, opacity 0.3s; /* 트랜지션 효과 추가 */
   }
   
   .caption {
@@ -479,10 +505,6 @@ dynamic
 	margin-top: 10px;
 	color: #000000;
   }
-  
-
-  
-  
   .swiper-button-prev {
 	left: 10px;
   }
@@ -501,6 +523,8 @@ table{
 	align-items: center;
 	justify-content: center;
 	border-spacing: 20px;
+	max-width: 100%;
+	width: 100%;
 }
 td {
 	background-color: #F7F7F7;
@@ -508,8 +532,7 @@ td {
 	border-radius: 20%;
 	font-weight: bold;
 	font-size: 15px;
-
-  }
+	width: 100%;  }
 
 
 .service{

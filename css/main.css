@@ -270,11 +270,11 @@ nav ul li a {
 	margin-left: 10px;
 	width: 225px;
   }
-.row{
+/* .row{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-}
+} */
 .row p{
 	padding-left: 10%;
 	padding-right: 10%;
@@ -534,6 +534,11 @@ table{
 	max-width: 100%;
 	width: 100%;
 }
+#serviceTable{
+	width: 100%;
+	table-layout: fixed;
+}
+
 td {
 	background-color: #F7F7F7;
 	padding: 30px;

@@ -60,3 +60,16 @@ $(document).ready(function() {
 		nav.toggleClass('open');
 	});
 });
+
+//FadeIn
+document.addEventListener("DOMContentLoaded", function() {
+	// 모든 td 요소를 선택하여 순회하며 페이드 인 효과 적용
+	var tds = document.querySelectorAll("#serviceTable td");
+	var delay = 0; // 각 요소의 페이드 인 지연 시간 (초기값 0)
+  
+	for (var i = 0; i < tds.length; i++) {
+	  tds[i].style.transitionDelay = delay + "s";
+	  tds[i].style.opacity = 1;
+	  delay += 0.2; // 0.2초씩 지연 시간을 증가하여 순차적으로 나타나도록 설정
+	}
+  });

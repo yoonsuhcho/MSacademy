@@ -97,16 +97,35 @@
    }
    }
    @media screen and (max-width: 767px) {
+	body{
+		overflow-x: hidden;
+	}
 	   #header .header-content {
-		 padding: 10px;
 		 font-size: 16px;
-		 flex-direction: column;
+		 flex-direction: column; 
+		 justify-content: center;
 		 align-items: center;
+		 text-align: center;
+	   }
+	   #header{
+		position: fixed;
+    max-width: 50%;
+    z-index: 999;
+	   }
+	   #header h1{
+		margin-left: 15px;
+		font-size: 35px;
 	   }
 	 }
    @media screen and (max-width: 767px) {
+	.row {
+		flex-wrap: wrap; /* 요소들이 한 줄에 모두 표시되지 않고 여러 줄로 나열되도록 설정 */
+	  }
+	  .col {
+		width: 50%; /* 요소가 반 너비로 표시되도록 설정 */
+	  }
    .banner{
-	   height: 750px;
+	   height:500px;
    }
    .banner #banner{
 	   padding-top: 18%;
@@ -120,7 +139,9 @@
 	margin-top: 25px;
 	margin-bottom: 30px;
    }
-   
+   #btxt{
+	font-size: 38px;
+   }
 	.banner-btn a {
 	margin-bottom: 70px;
    }
@@ -164,7 +185,7 @@
    }
    }
    
-   @media (max-width: 767px) {
+   @media screen and (max-width: 767px) {
    
 	   h2{
 		   font-size: 30px;
@@ -231,8 +252,7 @@
    
 			   .dynamic h1 {
 				 font-size: 40px;
-				 margin-bottom: 3%;
-			   }
+		   }
 			   .dynamic p {
 				 font-size: 16px;
 			   }
@@ -245,5 +265,7 @@
 			   .book img {
 				 width: 50%;
 			   }
+			   
+
 		   }
    

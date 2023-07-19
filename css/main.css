@@ -350,6 +350,12 @@ nav ul li a {
 }
   .swiper-button-next, .swiper-button-prev {
 	color: #191F28;
+	background-color: #ffffff; /* 배경색 설정 */
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 /* ----------------------------------------------------------------------------
 company 

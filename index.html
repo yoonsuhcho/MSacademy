@@ -325,10 +325,16 @@ centered-slides="true" space-between="30" grab-cursor="true">
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      renderBullet: function (index, className) {
+      return '<span class="' + className + '" style="background-color: #191F28;"></span>';
+      },
+      
     },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+      disabledClass: "swiper-button-disabled",
+    clickable: true,
     },
     loop:true,
   });

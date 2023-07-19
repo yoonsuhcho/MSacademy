@@ -345,6 +345,12 @@ nav ul li a {
 	margin-right: 15px;
 	display:inline-block
 }
+.swiper-pagination-bullet-active {
+	background: #191F28;
+}
+  .swiper-button-next, .swiper-button-prev {
+	color: #191F28;
+}
 /* ----------------------------------------------------------------------------
 company 
 ------------------------------------------------------------------------------*/
@@ -353,7 +359,7 @@ company
 	background-repeat: no-repeat;
   	background-size: cover;
 	background-position: center;
-	display: flex;
+	display: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -389,17 +395,16 @@ company
 
 	
 	#circle {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	list-style: none;
-	text-align: center;
-	margin: 0 auto;
-	width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		list-style: none;
+		text-align: center;
+		margin: 0 auto;
+		padding: 0;
 	}
-#circle li{
-	margin-left: 15px;
-}
+
 .text{
 	font-size: 25px;
 	width: 200px;
@@ -556,28 +561,7 @@ dynamic
 
 /* ------------------------------------------------------------------------
      table -------------------------------------------------------*/
-table{
-	color: #000;
-	border-collapse: separate;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-spacing: 20px;
-	max-width: 100%;
-	width: 100%;
-}
-#serviceTable{
-	width: 100%;
-	table-layout: fixed;
-}
-td {
-	background-color: #F7F7F7;
-	padding: 30px;
-	border-radius: 20%;
-	font-weight: bold;
-	font-size: 13px;
-	width: 100%; 
- }
+
 .service {
 	position: relative;
 	flex-direction: column;

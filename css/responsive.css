@@ -344,5 +344,21 @@
 				cursor: pointer;
 			  }
 
+			  .sh{
+				font-size: 15px;
+			  }
+			  .le{
+				font-size: 12px;
+			  }
+			  .btn{
+				font-size: 8px;
+			  }
+			  .best-img-wrapper {
+				position: absolute;
+				top:0px;
+				right: 5%;
+				width: 30%;
+			  }
+
 		   }
    

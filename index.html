@@ -98,14 +98,14 @@
 <!-- dynamic -->
 <div class="swiper mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3"
 centered-slides="true" space-between="30" grab-cursor="true">
-<div class="swiper-wrapper">
+<div class="swiper-wrapper" >
 <div class="swiper-slide"><div class="slide-item">
   <img src="images/IT/1.png">
   <div class="caption">앱(안드로이드/IOS)</div>
 </div></div>
 <div class="swiper-slide"><div class="slide-item">
   <img src="images/IT/2.png">
-  <div class="caption">홈페이지 랜딩페이지</div>
+  <div class="caption">홈페이지 · 랜딩페이지</div>
 </div></div>
 <div class="swiper-slide"><div class="slide-item">
   <img src="images/IT/3.png">
@@ -121,7 +121,7 @@ centered-slides="true" space-between="30" grab-cursor="true">
 </div></div>
 <div class="swiper-slide"><div class="slide-item">
   <img src="images/IT/7.png">
-  <div class="caption">봇  챗봇</div>
+  <div class="caption">봇 · 챗봇</div>
 </div></div>
 </div>
 <!-- <div class="swiper-button-next"></div>
@@ -187,12 +187,12 @@ centered-slides="true" space-between="30" grab-cursor="true">
         <div class="book">
           <div><img src="images/book2.png" alt=""><a href="https://product.kyobobook.co.kr/detail/S000201900377"><div class="text">구매하기</div></a></div>
           <div><img src="images/book1.png" alt=""><a href="https://product.kyobobook.co.kr/detail/S000061838885"><div class="text">구매하기</div></a></div>
-          <div><img src="images/book3.png" alt=""><div class="text">수강 신청하기</div></div>
-          <div><img src="images/book4.png" alt=""><div class="text">종이책 전자책 의뢰하기</div></div>
+          <div><img src="images/book3.png" alt=""><a href="https://pf.kakao.com/_xaUqtK"><div class="text">수강 신청하기</div></a></div>
+          <div><img src="images/book4.png" alt="" ><div class="text" style="letter-spacing :-0.5px;">종이책 · 전자책 의뢰하기</div></div>
         </div>
-     </div>
-            
+     </div>    
     </section>
+
     <section class="dynamic">
       <div class="container">
         <div>
@@ -332,37 +332,53 @@ centered-slides="true" space-between="30" grab-cursor="true">
 
 <!-- Initialize Swiper -->
 <script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-      return '<span class="' + className + '" style="background-color: #191F28;"></span>';
-      },
-      
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-      disabledClass: "swiper-button-disabled",
-    clickable: true,
-    },
-    loop:true,
-  });
+    function initSwiper() {
+      var screenWidth = window.innerWidth;
+      var slidesPerViewValue = screenWidth <= 767 ? 2 : 3;
+
+      if (window.mySwiper) {
+        // 이미 swiper 객체가 존재하는 경우 파괴하여 이전 설정 초기화
+        window.mySwiper.destroy();
+      }
+
+      window.mySwiper = new Swiper(".mySwiper", {
+        slidesPerView: slidesPerViewValue,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '" style="background-color: #191F28;"></span>';
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          disabledClass: "swiper-button-disabled",
+          clickable: true,
+        },
+        loop: true,
+      });
+    }
+
+    initSwiper(); // 페이지 로딩 시 슬라이더 초기화
+
+    // 창 크기 변경 시 슬라이더 갱신
+    window.addEventListener("resize", function () {
+      initSwiper(); // 변경된 슬라이드 옵션으로 다시 초기화
+    });
 </script>
 
-    <section class="dynamic">
+    <section class="dynamic" style="padding-bottom: 5%;">
       <div class="container">
           <h1>Other Services</h1>
           <div class="row">
-            <div class="col-4 col-md-2">
+            <div class="col-4 col-md-2 square-col">
               <div class="service">
                 <div class="pic pic1">
                   <img src="images/1.1.png" alt="">
@@ -513,8 +529,9 @@ centered-slides="true" space-between="30" grab-cursor="true">
               </div>
             </div>
           </div>
-          <button class="load-more-btn hidden">더보기</button>
+          <div class="load-more-btn hidden">See All</div>
         </div>
+
     </section>
 
     <script>
@@ -531,10 +548,10 @@ document.addEventListener("DOMContentLoaded", function() {
   function handleLoadMore() {
     toggleServiceVisibility();
 
-    if (loadMoreBtn.textContent === "더보기") {
-      loadMoreBtn.textContent = "접기";
+    if (loadMoreBtn.textContent === "See All") {
+      loadMoreBtn.textContent = "Hide All";
     } else {
-      loadMoreBtn.textContent = "더보기";
+      loadMoreBtn.textContent = "See All";
     }
   }
 
@@ -570,25 +587,25 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class ="container">
       <h3 style="font-weight: 400;">더 궁금하신 사항이 있다면,<br>언제든지 엠에스아카데미 고객센터로 연락주세요!</h3>
     
-    <div> <a href="https://pf.kakao.com/_xaUqtK"><img src="images/kakaochannel.png" style="width: 242px;"></a></div>
+    <div> <a href="https://pf.kakao.com/_xaUqtK"><img src="images/kakaochannel.png"  style="width: 242px;"></a></div>
     </div></div>
       
 <!-- footer section-->
 <footer class="section footer">
       <div class="container">
-        <p>
+        <div id="info">
           엠에스아카데미(주)  |  대표이사: 황영오 <br>
           본사: 경기도 성남시 분당구 황새울로 200번길 36, 분당동부루트빌딩 1014호, 1015호<br>
           강남지점: 서울시 서초구 강남대로 375, 서초현대타워 509호, 510호<br>
           고객센터  1661-2749 <br>
-          COPYRIGHT © 엠에스아카데미(주) ALL RIGHTS RESERVED.   <br>    
+          COPYRIGHT © 엠에스아카데미(주) ALL RIGHTS RESERVED.   <br> <br>   
           <ul class="footer-share">
-          <a href="#"><img src="images/facebook.png" alt="" width="50px" style="margin-right: 10px;"> </a>
-          <a href="#"><img src="images/blog.png" alt="" width="50px" style="margin-right: 10px;"></a>
-          <a href="#"><img src="images/insta.png" alt="" width="50px" style="margin-right: 10px;"></a>
-          <a href="#"><img src="images/kakao (2).png" alt="" width="50px" style="margin-right: 10px;"></a>
+          <a href="#"><img src="images/facebook.png" alt="" > </a>
+          <a href="#"><img src="images/blog.png" alt="" ></a>
+          <a href="#"><img src="images/insta.png" alt="" ></a>
+          <a href="#"><img src="images/kakao (2).png" alt="" ></a>
         </ul>
-        </p>
+      </div>
     </div>
 </div>
 </footer></section>

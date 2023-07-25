@@ -639,6 +639,7 @@ dynamic
 /* ------------------------------------------------------------------------
      table -------------------------------------------------------*/
 
+
 .service {
 	position: relative;
 	flex-direction: column;
@@ -647,6 +648,7 @@ dynamic
 	background-color: #f7f7f7;
 	border-radius: 10%;
 	margin-bottom: 15px;
+	
 }
 
   .service .pic {
@@ -658,11 +660,17 @@ dynamic
 	border-radius: 50%;
 	width: 90px;
 	height: 90px;
-	display: flex;
+		display: flex;
 	align-items: center;
 	justify-content: center;
   }
-  /* Section 1~6 */
+  .service .pic div {
+	position: absolute;
+	bottom: 100%; /* div 요소를 이미지 위로 올리기 위해 "bottom" 속성 사용 */
+	left: 50%;
+	transform: translateX(-50%); /* 가운데 정렬 */
+	margin-top: -10px; /* 원하는 간격만큼 위로 올립니다. */
+  }
   .pic1{
 	background-color: #4FE6AF;
   }

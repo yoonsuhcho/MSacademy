@@ -65,12 +65,11 @@ h3 {
 	letter-spacing:1px;
 }
 .load-more-btn{
-	background-color: #424A55;
+	background-color: #ffffff;
 	color: #fff;
 	font-size: 13px;
 	border-radius:99px;
 	display: inline-block;
-	text-transform: uppercase;
 	margin: 0;
 	outline: none;
 	padding: 13px 23px;
@@ -83,8 +82,9 @@ h3 {
 	color: #fff;
 	font-size: 13px;
 	border-radius:99px;
-	display: inline-block;
-	text-transform: uppercase;
+	display: flex;
+	justify-content: center; /* 가로 가운데 정렬 */
+	align-items: center; 
 }
 .btn:hover, .btn:focus {
 	background-color: #e52e2e;
@@ -556,7 +556,9 @@ dynamic
 	max-height: 100%;
 	margin: 0 auto;
   }
+  
   .slide-item {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -602,19 +604,17 @@ dynamic
 
   .square{
 	position: relative;
-	width: 150px;
-	height: 250px;
-	border-radius: 10%;
+	width: 910px;
+	height: 500px;
+	border-radius: 10px 10px 10px 10px;
 	background-color: #f7f7f7;
 	border-color: #e6e6e6;
 	color: #000;
-	padding: 5%;
-	margin-left: 30px;
-	justify-content: flex-start;
-	align-items: left;
+	padding-left: 10% !important;
 	text-align: left;
-	
+	box-sizing: border-box;
   }
+
   .sh{
 	font-weight: bold;
 	font-size: 20px;
@@ -624,7 +624,6 @@ dynamic
 	color: #636363;
   }
  
-  
   /* Add margin between the label and the stars */
   .square div span {
 	margin-right: 10px;
@@ -635,9 +634,6 @@ dynamic
 	text-align: right;
 	width: 60px;
   }
-  
-  
-  /* Style the stars images */
 
 
 /* ------------------------------------------------------------------------
@@ -667,18 +663,18 @@ dynamic
 	justify-content: center;
   }
   /* Section 1~6 */
-.pic1 {
-	background-color: #FFA618;
+  .pic1{
+	background-color: #4FE6AF;
   }
-  
+  .pic4{
+	background-color: #10C4D3
+  }
   /* Section 7~12 */
 .pic2 {
-	background-color: #FF6D1D;
+	background-color: #0B81E3;
   }
-  
-  /* Section 13~18 */
-.pic3 {
-	background-color: #27272C;
+  .pic3 {
+	background-color: #0C4E8B;
   }
   .service img {
 	display: block;
@@ -708,7 +704,7 @@ dynamic
 	flex-direction: column;
 	align-items: flex-start; /* Align items to the left */
 	justify-content: center; /* Center items vertically */
-	width: 80%;
+	width: 97%;
 	height: 250px;
 	background-color: #f7f7f7;
 	border-color: #e6e6e6;

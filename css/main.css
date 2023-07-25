@@ -699,7 +699,7 @@ dynamic
 	width: 20%;
   }
   .dynamic .swiper-slide .slide-item .square {
-	position: relative; /* Add this to make absolute positioning work correctly */
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start; /* Align items to the left */
@@ -711,6 +711,7 @@ dynamic
 	color: #000;
 	padding: 5%;
 	text-align: left;
+	
   }
   .dynamic .swiper-slide .slide-item .square span {
 	display: inline-block; /* span 요소가 블록 요소로 변경됩니다. */

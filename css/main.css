@@ -605,7 +605,8 @@ dynamic
   .square{
 	position: relative;
 	width: 910px;
-	height: 500px;
+	height: 400px;
+	padding-top: 50%;
 	border-radius: 10px 10px 10px 10px;
 	background-color: #f7f7f7;
 	border-color: #e6e6e6;
@@ -648,6 +649,7 @@ dynamic
 	background-color: #f7f7f7;
 	border-radius: 10%;
 	margin-bottom: 15px;
+	font-size: 17px;
 }
 
   .service .pic {
@@ -663,6 +665,7 @@ dynamic
 	align-items: center;
 	justify-content: center;
   }
+
   .service .pic div {
 	position: absolute;
 	bottom: 100%; /* div 요소를 이미지 위로 올리기 위해 "bottom" 속성 사용 */
@@ -670,12 +673,15 @@ dynamic
 	transform: translateX(-50%); /* 가운데 정렬 */
 	margin-top: -10px; /* 원하는 간격만큼 위로 올립니다. */
   }
+
   .pic1{
 	background-color: #4FE6AF;
   }
+
   .pic4{
 	background-color: #10C4D3
   }
+
   /* Section 7~12 */
 .pic2 {
 	background-color: #0B81E3;
@@ -703,7 +709,7 @@ dynamic
 	position: absolute;
 	top:0px;
 	right: 5%;
-	width: 20%;
+	width: 100%;
   }
   .dynamic .swiper-slide .slide-item .square {
 	position: relative;

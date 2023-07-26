@@ -273,9 +273,9 @@
    @media screen and (max-width: 767px) {
 
 	.load-more-btn{
-		background-color: #424A55;
-		border: 1px #000;
-		color: #fff;
+		background-color: #ffffff;
+		border: 1px solid #000;
+		color: #000;
 		font-size: 13px;
 		border-radius:99px;
 		display: inline-block;
@@ -426,5 +426,9 @@
 				margin-top: 20px;
 		
 		   }
+		   .service div {
+		  transform: translate(0, -100%);
+		  font-size: 12px;
+		  }
 		}
    
